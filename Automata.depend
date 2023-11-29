@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1701231909 source:d:\universidad\semestre iii\teoría\automata\main.cpp
+	<cstddef>
+	<iostream>
+
