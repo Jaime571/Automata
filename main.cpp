@@ -24,6 +24,7 @@ int main() {
         system("pause");
         system("cls");
         cout<<"Ingrese la cadena\n-> ";
+        automata.eraseErr();
         }
     return 0;
     }
