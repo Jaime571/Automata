@@ -1,13 +1,14 @@
 # depslib dependency file v1.0
-1701234780 source:d:\universidad\semestre iii\teoría\automata\main.cpp
+1701323163 source:d:\universidad\semestre iii\teoría\automata\main.cpp
 	<cstddef>
 	<iostream>
 	"Automata.hpp"
 
-1701234893 d:\universidad\semestre iii\teoría\automata\automata.hpp
+1701323070 d:\universidad\semestre iii\teoría\automata\automata.hpp
 	<iostream>
 	<cstddef>
+	<string>
 
-1701235006 source:d:\universidad\semestre iii\teoría\automata\automata.cpp
+1701323195 source:d:\universidad\semestre iii\teoría\automata\automata.cpp
 	"Automata.hpp"
 

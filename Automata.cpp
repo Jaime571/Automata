@@ -4,8 +4,10 @@
 bool Automata::procesar(void) {
     size_t estado = 0;
     char c;
-    while((c = std::cin.get()) != '\n')
+    while((c = std::cin.get()) != '\n') {
+        if(estado != 8) setErr(c);
         estado = MATRIZ_DE_TRANSICIONES[estado][posicionAlfabeto(c)];
+        }
     return esFinal(estado);
     }
 
@@ -21,5 +23,17 @@ bool Automata::esFinal(size_t estado) {
     for(i = 0; i < CANT_ESTADOS_FINALES; i++)
         if(estado == ESTADOS_FINALES[i]) return true;
     return false;
+    }
+
+void Automata::setErr(char c) {
+    err += c;
+    }
+
+std::string Automata::getErr(void) {
+    return err;
+    }
+
+void Automata::eraseErr(void) {
+    err = '\0';
     }
 

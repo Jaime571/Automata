@@ -3,9 +3,12 @@
 
 #include <iostream>
 #include <cstddef>
+#include <string>
 
 class Automata {
     private:
+        int CONT_ERROR = 0;
+
         const size_t SIMBOLOS [15] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '+', '-', '*', '/', '.'};
 
         const size_t MATRIZ_DE_TRANSICIONES [9][16] = {
@@ -24,11 +27,15 @@ class Automata {
         const size_t CANT_SIMBOLOS = 15;
         const size_t ESTADOS_FINALES [3] = {0, 5, 7};
         const size_t CANT_ESTADOS_FINALES = 3;
+        std::string err;
+        size_t posicionAlfabeto(char);
+        bool esFinal(size_t);
 
     public:
         bool procesar(void);
-        size_t posicionAlfabeto(char);
-        bool esFinal(size_t);
+        void setErr(char);
+        std::string getErr(void);
+        void eraseErr(void);
 
     };
 
